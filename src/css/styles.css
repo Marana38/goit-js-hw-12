@@ -16,3 +16,142 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#search-form {
+  display: flex;
+  margin-top: 36px;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+input {
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  background: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+
+}
+
+.submit-btn {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.photo-card {
+  border: 1px solid #808080;
+  background: url("path_to_image");
+  border-radius: 8px;
+}
+
+.photo-card img {
+  width: 360px;
+  height: 200px;
+
+}
+
+.info {
+  margin-top: 8px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  z-index: 1000;
+}
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin: 0 auto;
+
+}
+
+.load-more:hover {
+  background: #3a5bcc;
+}
+
+.load-more:active {
+  background: #2a4bb5;
+}
+
+.end-message {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
