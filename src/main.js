@@ -55,15 +55,17 @@ async function onLoadMore() {
     try {
         const { hits, totalHits } = await fetchImages(query, page, perPage);
 
-        if (gallery.querySelectorAll('.photo-card').length + hits.length >= totalHits) {
-            loadMoreBtn.classList.add('hidden');
-            const endMessage = document.querySelector('.end-message');
-            endMessage.classList.remove('hidden');
-            return;
-        }
 
         gallery.insertAdjacentHTML('beforeend', createImageMarkup(hits));
         lightbox.refresh();
+
+        const totalLoaded = gallery.querySelectorAll('.photo-card').length;
+        if (totalLoaded >= totalHits) {
+            loadMoreBtn.classList.add('hidden');
+            const endMessage = document.querySelector('.end-message');
+            endMessage.classList.remove('hidden');
+        }
+
 
         const { height: cardHeight } = gallery.firstElementChild.getBoundingClientRect();
         window.scrollBy({ top: cardHeight * 2, behavior: 'smooth' });
