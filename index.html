@@ -1,22 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-12/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/index-DvPDDfy5.css">
+    <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-61TxKDl8.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CX4EDM7x.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/styles-BIMgQtVV.css">
   </head>
   <body>
-    
-
     <main>
-      <!-- Loads the specified .html file -->
-      
+      <form id="search-form">
+        <input type="text" name="searchQuery" placeholder="Search images..." />
+        <button class="submit-btn" type="submit">Search</button>
+      </form>
+      <div class="loader hidden"></div>
+      <div class="gallery"></div>
+      <button class="load-more hidden">Load more</button>
+      <p class="end-message hidden">
+        We're sorry, but you've reached the end of search results.
+      </p>
     </main>
-
-    
-
   </body>
 </html>
